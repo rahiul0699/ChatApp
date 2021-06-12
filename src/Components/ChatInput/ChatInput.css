@@ -1,0 +1,31 @@
+.chatInput{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+ 
+    bottom: 20px;
+   
+
+    /* transform: translate(-50%,-50%); */
+    
+}
+.inputForm {
+   
+}
+.inputForm input 
+{
+padding: 10px 20px;
+border:1px solid gray;
+background-color: transparent;
+font-size: 15px;
+font-weight: 600;
+}
+.inputForm input::placeholder
+{
+    font-weight: 500;
+}
+.inputForm input:focus
+{
+    outline: none;
+}

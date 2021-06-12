@@ -1,0 +1,16 @@
+.chatwindow
+{
+    height: 100vh;
+    width:100%;
+    background-color: #7868e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chatContainer
+{
+    height: 30rem;
+    width:50rem;
+    background-color: white;
+    display: flex;
+}

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {useSelector} from 'react-redux'
+import Join from './Components/Join/Join'
+import ChatWindow from './Components/ChatWindow/ChatWindow'
+import {useState } from 'react';
+import context from './context'
 
 function App() {
+
+  const [socket,setSocket]=useState(null)
+     const socketInfo=context
+    const setSocketInfo=(socket)=>{
+
+    setSocket(socket)
+    }
+  const user = useSelector(state => state.userSlice.user)
+  let app=<Join setSocketInfo={setSocketInfo}/>
+  if(user && socket)
+  {
+app=(
+<socketInfo.Provider value={socket}>
+ <ChatWindow/>
+    </socketInfo.Provider>
+)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+     
+     <div>
+
+       {app}
+     </div>
+ 
   );
 }
 

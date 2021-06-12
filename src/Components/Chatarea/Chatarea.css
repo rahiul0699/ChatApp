@@ -1,0 +1,83 @@
+.chatarea
+{
+    flex:0.7;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.chatHeader
+{
+    background-color:hsla(248, 72%, 65%, 0.847) ;
+    padding: 5px 0;
+}
+.chatHeader h2{
+color: white;
+margin-left: 10px;
+}
+.chat 
+{
+    flex: 1;
+    overflow-y: scroll;
+
+}
+.chat::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+.chat::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;
+}
+ 
+.chat::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.message
+{
+    width: 100%;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.adminMessage  {
+  padding: 5px ;
+  width: fit-content;
+  margin: auto;
+    text-align: center;
+
+    background-color: rgba(128, 128, 128, 0.336);
+  
+    font-size: 12px;
+    border-radius: 10px;
+}
+.userMessage {
+padding: 5px 10px;
+
+    background-color: #7868E6;
+    color: white;
+    font-size: 15px;
+    width: fit-content;
+    border-radius: 10px;
+    
+}
+.sender 
+{
+
+    margin-left: auto;
+    
+    border-bottom-right-radius:4px ;
+}
+.chat .reciever 
+{
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+.senderInfo
+{
+    color: rgb(194, 182, 182);
+    font-size: 10px;
+}
+
+.scrollDiv{
+    height: 70px;
+}
